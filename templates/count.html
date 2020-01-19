@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Result</title>
+</head>
+<body>
+    <h1>The result of the count of total words  is: {{count}} </h1>
+    <h2>The Result from counting each word is:</h2>
+    <ul>
+        {% for word, count in wordcount %}
+            <li>Word: {{word}}, Count: {{count}}</li>
+        {% endfor %}
+    </ul>
+    <h3>And the full text was: {{text_content}}</h3>
+    <h3> <a href="{% url 'home' %}">Back to Home</a> </h3>
+</body>
+</html>
